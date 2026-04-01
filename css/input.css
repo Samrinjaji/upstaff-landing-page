@@ -4,6 +4,7 @@
   /* fonts */
     --font-main: "Roboto", "Open Sans", sans-serif;
     --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-open: "Open Sans", "Roboto", sans-serif;
   
   /* Backgrounds */
     --color-void-elevated: #080E2E;

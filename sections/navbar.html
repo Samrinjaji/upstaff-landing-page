@@ -1,0 +1,38 @@
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-black/10">
+    <div class="px-6 py-2.5 flex items-center justify-between">
+          
+          <!-- Logo -->
+          <div class="flex items-center gap-1">
+            <div class="logo-icon">
+              <img src="/assets/logo/upstaff.png" alt="UPSTAFF Logo" class="w-14 h-14">
+            </div>
+
+            <!-- Text -->
+            <div class="flex flex-col leading-none">
+              <span class="tracking-wide font-bold text-2xl font-open">upstaff</span>
+              <span class="text-sm text-sky tracking-wide self-end -mt-1 font-medium">
+                academy
+              </span>
+            </div>
+          </div>
+
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#features" class="text-base text-ash/90 hover:text-sky">Features</a>
+            <a href="#tools" class="text-base text-ash/90 hover:text-sky">Course Library</a>
+            <a href="#testimonials" class="text-base text-ash/90 hover:text-sky">About</a>
+            <a href="#faq" class="text-base text-ash/90 hover:text-sky">FAQ</a>
+          </div>
+
+          <!-- CTA -->
+          <div class="hidden md:flex gap-3">
+            <button class="btn-primary text-base py-2.5 px-8 font-semibold bg-void-elevated text-parchment rounded-lg hover:bg-void-elevated/90 cursor-pointer">Login</button>
+          </div>
+
+          <!-- Mobile -->
+          <button id="hamburger" class="md:hidden text-gray-400" onclick="toggleMenu()">
+            <img src="assets/icons/menu.svg" class="invert" alt="">
+          </button>
+
+    </div>
+</nav>
