@@ -1,20 +1,14 @@
-function loadSection(id, file) {
+function loadSection(id, file, callback) {
   fetch(`./sections/${file}`)
     .then(res => res.text())
     .then(data => {
       document.getElementById(id).innerHTML = data;
+      if (callback) callback(); // initialize after load
     });
 }
 
-// Load all sections
-loadSection("navbar", "navbar.html");
-loadSection("hero", "hero.html");
-loadSection("features", "features.html");
-loadSection("testimonials", "testimonials.html");
-loadSection("cta", "cta.html");
-loadSection("footer", "footer.html");
-
-document.addEventListener("DOMContentLoaded", () => {
+// Initialize carousel
+function initCarousel() {
   const track = document.getElementById("carousel-track");
   const slides = document.querySelectorAll(".carousel-slide");
   const dots = document.querySelectorAll(".carousel-dot");
@@ -32,22 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const width = slides[0].clientWidth;
     track.style.transform = `translateX(-${index * width}px)`;
 
-    // Update dots
     dots.forEach((dot, i) => {
       if (i === index) {
         dot.style.width = "20px";
-        dot.style.background = "#44D5E8"; // active dot color
+        dot.style.background = "#44D5E8";
       } else {
         dot.style.width = "6px";
         dot.style.background = "rgba(255,255,255,0.2)";
       }
     });
 
-    // Update counter
     currentText.textContent = index + 1;
   }
 
-  // Make functions global for onclick
   window.carouselMove = function(direction) {
     index += direction;
     if (index < 0) index = total - 1;
@@ -60,14 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCarousel();
   }
 
-  // Optional: auto-slide every 2s
-  setInterval(() => {
-    carouselMove(1);
-  }, 2000);
-
-  // Initial render
+  setInterval(() => carouselMove(1), 3000);
   updateCarousel();
-
-  // Optional: resize listener for responsive
   window.addEventListener("resize", updateCarousel);
-});
+}
+
+// Load all sections, init carousel after hero loads
+loadSection("navbar", "navbar.html");
+loadSection("hero", "hero.html", initCarousel); // <-- callback here
+loadSection("features", "features.html");
+loadSection("testimonials", "testimonials.html");
+loadSection("cta", "cta.html");
+loadSection("footer", "footer.html");
