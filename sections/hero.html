@@ -1,0 +1,149 @@
+<section class="hero-bg relative min-h-screen flex items-center pt-20">
+  <div class="grid-lines"></div>
+ 
+  <!-- Decorative rings -->
+  <div class="absolute top-1/2 right-0 -translate-y-1/2 w-150 h-150 rounded-full border border-[rgba(201,168,76,0.06)] pointer-events-none"></div>
+  <div class="absolute top-1/2 right-10 -translate-y-1/2 w-100 h-100 rounded-full border border-[rgba(201,168,76,0.05)] pointer-events-none"></div>
+ 
+  <div class="w-full px-44 py-24 grid lg:grid-cols-2 gap-12 items-center">
+ 
+    <!-- Left — Copy -->
+    <div class="max-w-xl lg:max-w-none">
+      <div class="pill inline-flex items-center bg-parchment/40 border border-ash/30 text-void-elevated text-xs tracking-[0.12em] uppercase px-3.5 py-1 rounded-full font-syne font-semibold mb-8 gap-2 reveal">
+        <span class="w-2 h-2 rounded-full bg-sky inline-block"></span>
+        Corporate Learning Platform
+      </div>
+ 
+      <h1 class="text-5xl lg:text-6xl xl:text-7xl leading-none tracking-tight mb-6 font-roboto font-extrabold reveal reveal-delay-1">
+        Skills That<br />
+        <span class="text-transparent bg-clip-text bg-linear-to-tr from-sky to-sky/100">
+          Power Your<br />Organization
+        </span>
+      </h1>
+ 
+      <p class="text-ash/70 text-lg leading-relaxed max-w-md mb-10  font-light reveal reveal-delay-2">
+        Upstaff Academy helps your team learn faster with structured courses, real-world tools, 
+        and trackable progress — all in one place.
+      </p>
+ 
+      <div class="flex flex-wrap gap-4 reveal reveal-delay-3">
+        <button class="btn-primary bg-void-elevated text-parchment font-main font-bold inline-flex items-center gap-2 px-8 py-3 rounded-sm tracking-[0.04em] border-0 shadow-[0_4px_20px_rgba(201,168,76,0.3)] transition-all duration-250 cursor-pointer">
+          Login to Start Learning
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="btn-outline inline-flex items-center gap-2 px-7 py-3 rounded-sm border border-ash/50 bg-transparent text-void-elevated font-syne font-semibold tracking-[0.04em] transition-all duration-250 cursor-pointer" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+          Explore Features
+        </button>
+      </div>
+ 
+      <!-- Trust badges -->
+      <div class="flex items-center gap-6 mt-12 reveal reveal-delay-4">
+        <div class="flex -space-x-2">
+          <div class="w-8 h-8 rounded-full bg-[#2a3050] border-2 border-[#0A0A0F] flex items-center justify-center text-xs font-bol text-sky">A</div>
+          <div class="w-8 h-8 rounded-full bg-[#1e2a40] border-2 border-[#0A0A0F] flex items-center justify-center text-xs font-bold text-sky">M</div>
+          <div class="w-8 h-8 rounded-full bg-[#2a2040] border-2 border-[#0A0A0F] flex items-center justify-center text-xs font-bold text-sky">R</div>
+          <div class="w-8 h-8 rounded-full bg-[#203030] border-2 border-[#0A0A0F] flex items-center justify-center text-xs font-bold text-sky">S</div>
+        </div>
+        <p class="text-base text-ash/90 gap-1.5 flex items-center">
+           Trusted by over
+          <span class="text-void-elevated font-semibold">200+ employees</span> trained this quarter
+        </p>
+      </div>
+    </div>
+ 
+    <!-- Right — Image Carousel -->
+    <div class="reveal reveal-delay-2 relative">
+      <div class="absolute -inset-4 bg-linear-to-br from-[rgba(201,168,76,0.08)] to-transparent rounded-2xl blur-xl pointer-events-none"></div>
+ 
+      <div class="relative feature-card rounded-xl overflow-hidden min-h-105">
+ 
+        <!-- Carousel Track -->
+        <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out min-h-125">
+ 
+          <!-- Slide 1 -->
+          <div class="carousel-slide shrink-0 w-full relative min-h-105">
+            <img src="/assets/images/dji_mimo_20251028_071640_20251027231640_1761933715441_burst.jpg"
+                 alt="Team training session" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,15,0.85)_0%,rgba(10,10,15,0.2)_60%,transparent_100%)]"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="pill mb-2 w-fit inline-flex items-center bg-parchment/40 border border-ash/30 text-void-elevated text-xs tracking-[0.12em] uppercase px-3.5 py-1 rounded-full font-syne font-semibold gap-2">Team Training</div>
+              <p class="text-base leading-snug font-main font-bold tracking-wider text-parchment/50">Upskilling employees<br/>across every department</p>
+            </div>
+          </div>
+ 
+          <!-- Slide 2 -->
+          <div class="carousel-slide shrink-0 w-full relative min-h-125">
+            <img src="/assets/images/PXL_20251027_070658674.jpg"
+                 alt="Employee learning" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,15,0.85)_0%,rgba(10,10,15,0.2)_60%,transparent_100%)]"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="pill mb-2 w-fit inline-flex items-center bg-parchment/40 border border-ash/30 text-void-elevated text-xs tracking-[0.12em] uppercase px-3.5 py-1 rounded-full font-syne font-semibold gap-2">Live Learning</div>
+              <p class="text-base leading-snug font-main font-bold tracking-wider text-parchment/50">Interactive courses built<br/>for real-world tools</p>
+            </div>
+          </div>
+ 
+          <!-- Slide 3 -->
+          <div class="carousel-slide shrink-0 w-full relative min-h-125">
+            <img src="/assets/images/dji_mimo_20251028_071640_20251027231640_1761933715441_burst.jpg"
+                 alt="Corporate workshop" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,15,0.85)_0%,rgba(10,10,15,0.2)_60%,transparent_100%)]"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="pill mb-2 w-fit inline-flex items-center bg-parchment/40 border border-ash/30 text-void-elevated text-xs tracking-[0.12em] uppercase px-3.5 py-1 rounded-full font-syne font-semibold gap-2">Workshops</div>
+              <p class="text-base leading-snug font-main font-bold tracking-wider text-parchment/50">Collaborative workshops<br/>tracked by management</p>
+            </div>
+          </div>
+ 
+          <!-- Slide 4 -->
+          <div class="carousel-slide shrink-0 w-full relative min-h-125">
+            <img src="/assets/images/PXL_20251027_070658674.jpg"
+                 alt="Employee recognition" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,15,0.85)_0%,rgba(10,10,15,0.2)_60%,transparent_100%)]"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="pill mb-2 w-fit inline-flex items-center bg-parchment/40 border border-ash/30 text-void-elevated text-xs tracking-[0.12em] uppercase px-3.5 py-1 rounded-full font-syne font-semibold gap-2">Recognition</div>
+              <p class="text-base leading-snug font-main font-bold tracking-wider text-parchment/50">Celebrate employees who<br/>complete certifications</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide shrink-0 w-full relative min-h-125">
+            <img src="/assets/images/dji_mimo_20251028_071640_20251027231640_1761933715441_burst.jpg"
+                 alt="Employee recognition" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,15,0.85)_0%,rgba(10,10,15,0.2)_60%,transparent_100%)]"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="pill mb-2 w-fit inline-flex items-center bg-parchment/40 border border-ash/30 text-void-elevated text-xs tracking-[0.12em] uppercase px-3.5 py-1 rounded-full font-syne font-semibold gap-2">Recognition</div>
+              <p class="text-base leading-snug font-main font-bold tracking-wider text-parchment/50">Celebrate employees who<br/>complete certifications</p>
+            </div>
+          </div>
+ 
+        </div><!-- /carousel-track -->
+ 
+        <!-- Prev Arrow -->
+        <button id="carousel-prev" onclick="carouselMove(-1)"
+          class="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center transition-all bg-[rgba(10,10,15,0.7)] border border-[rgba(201,168,76,0.25)] backdrop-blur-sm hover:border-sky">
+          <img src="/assets/icons/chevron-left.svg" alt="">
+        </button>
+ 
+        <!-- Next Arrow -->
+        <button id="carousel-next" onclick="carouselMove(1)"
+          class="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center transition-all bg-[rgba(10,10,15,0.7)] border border-[rgba(201,168,76,0.25)] backdrop-blur-sm hover:border-sky">
+          <img src="/assets/icons/chevron-right.svg" alt="">
+        </button>
+ 
+        <!-- Dot Indicators -->
+        <div id="carousel-dots" class="absolute bottom-16 right-5 flex gap-1.5 z-10">
+          <button class="carousel-dot w-5  h-1.5 rounded-full transition-all bg-sky" onclick="carouselGoTo(0)"></button>
+          <button class="carousel-dot w-1.5 h-1.5 rounded-full transition-all" style="background:rgba(255,255,255,0.2);"  onclick="carouselGoTo(1)"></button>
+          <button class="carousel-dot w-1.5 h-1.5 rounded-full transition-all" style="background:rgba(255,255,255,0.2);"  onclick="carouselGoTo(2)"></button>
+          <button class="carousel-dot w-1.5 h-1.5 rounded-full transition-all" style="background:rgba(255,255,255,0.2);"  onclick="carouselGoTo(3)"></button>
+          <button class="carousel-dot w-1.5 h-1.5 rounded-full transition-all" style="background:rgba(255,255,255,0.2);"  onclick="carouselGoTo(4)"></button>
+        </div>
+ 
+        <!-- Slide Counter -->
+        <div class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full text-xs text-parchment bg-[rgba(10,10,15,0.7)] border border-[rgba(76,182,201,0.2)] font-main backdrop-blur-sm">
+          <span id="carousel-current">1</span> / <span id="carousel-total">5</span>
+        </div>
+ 
+      </div><!-- /feature-card -->
+    </div><!-- /right col -->
+ 
+  </div>
+</section>

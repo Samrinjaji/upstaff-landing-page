@@ -16,3 +16,34 @@
     --color-sky: #44D5E8;
 
 }
+
+.grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),   /* horizontal lines */
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px); /* vertical lines */
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 40%, transparent 100%);
+  pointer-events: none;
+}
+/* 
+.hero-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 20%, rgba(201,168,76,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(201,168,76,0.06) 0%, transparent 50%),
+    var(--color-sky-100);
+}
+
+ */
+ .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201,168,76,0.45);
+  filter: brightness(1.05);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-sky);
+  color: var(--color-sky);
+  background: rgba(201,168,76,0.06);
+}
