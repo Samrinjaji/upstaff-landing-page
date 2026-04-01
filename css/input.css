@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  /* fonts */
+    --font-main: "Roboto", "Open Sans", sans-serif;
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Backgrounds */
+    --color-void-elevated: #080E2E;
+    --color-void-surface: #1c1b1a;
+
+  /* accents */
+    --color-parchment: #ede8de;
+    --color-ash: #6e6b66;
+    --color-sky: #44D5E8;
+
+}
