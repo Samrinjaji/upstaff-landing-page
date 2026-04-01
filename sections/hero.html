@@ -16,7 +16,7 @@
  
       <h1 class="text-5xl lg:text-6xl xl:text-7xl leading-none tracking-tight mb-6 font-roboto font-extrabold reveal reveal-delay-1">
         Empowering<br />
-        <span class="text-transparent bg-clip-text bg-linear-to-tr from-sky to-sky/50">
+        <span class="text-transparent bg-clip-text bg-linear-to-tr from-sky to-sky">
           Upstaff<br />Virtual Pro
         </span>
       </h1>
@@ -52,13 +52,13 @@
     </div>
  
     <!-- Right — Image Carousel -->
-    <div class="reveal reveal-delay-2 relative">
-      <div class="absolute -inset-4 bg-linear-to-br from-[rgba(201,168,76,0.08)] to-transparent rounded-2xl blur-xl pointer-events-none"></div>
+    <div class="reveal reveal-delay-2 relative group">
+      <div class="absolute -inset-10 bg-sky/5 blur-[100px] rounded-full pointer-events-none"></div>
  
       <div class="relative feature-card rounded-xl overflow-hidden min-h-105">
  
         <!-- Carousel Track -->
-        <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out min-h-125">
+        <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out min-h-125 cursor-pointer">
  
           <!-- Slide 1 -->
           <div class="carousel-slide shrink-0 w-full relative min-h-105">
@@ -84,7 +84,7 @@
  
           <!-- Slide 3 -->
           <div class="carousel-slide shrink-0 w-full relative min-h-125">
-            <img src="/assets/images/dji_mimo_20251028_071640_20251027231640_1761933715441_burst.jpg"
+            <img src="/assets/images/IMG_0152.JPG"
                  alt="Corporate workshop" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,15,0.85)_0%,rgba(10,10,15,0.2)_60%,transparent_100%)]"></div>
             <div class="absolute bottom-0 left-0 right-0 p-6">
@@ -95,7 +95,7 @@
  
           <!-- Slide 4 -->
           <div class="carousel-slide shrink-0 w-full relative min-h-125">
-            <img src="/assets/images/PXL_20251027_070658674.jpg"
+            <img src="/assets/images/IMG_9886.jpg"
                  alt="Employee recognition" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,15,0.85)_0%,rgba(10,10,15,0.2)_60%,transparent_100%)]"></div>
             <div class="absolute bottom-0 left-0 right-0 p-6">
@@ -105,7 +105,7 @@
           </div>
 
           <div class="carousel-slide shrink-0 w-full relative min-h-125">
-            <img src="/assets/images/dji_mimo_20251028_071640_20251027231640_1761933715441_burst.jpg"
+            <img src="/assets/images/dji_mimo_20251028_073430_20251028073430_1761933714838_photo.jpg"
                  alt="Employee recognition" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,15,0.85)_0%,rgba(10,10,15,0.2)_60%,transparent_100%)]"></div>
             <div class="absolute bottom-0 left-0 right-0 p-6">
@@ -118,13 +118,13 @@
  
         <!-- Prev Arrow -->
         <button id="carousel-prev" onclick="carouselMove(-1)"
-          class="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center transition-all bg-[rgba(10,10,15,0.7)] border border-[rgba(201,168,76,0.25)] backdrop-blur-sm hover:border-sky">
+          class="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center transition-all bg-[rgba(10,10,15,0.7)] border border-[rgba(201,168,76,0.25)] backdrop-blur-sm cursor-pointer opacity-40 group-hover:opacity-100 hover:border-sky hover:scale-110">
           <img src="/assets/icons/chevron-left.svg" alt="">
         </button>
  
         <!-- Next Arrow -->
         <button id="carousel-next" onclick="carouselMove(1)"
-          class="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center transition-all bg-[rgba(10,10,15,0.7)] border border-[rgba(201,168,76,0.25)] backdrop-blur-sm hover:border-sky">
+          class="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center transition-all bg-[rgba(10,10,15,0.7)] border border-[rgba(201,168,76,0.25)] backdrop-blur-sm cursor-pointer opacity-40 group-hover:opacity-100 hover:border-sky hover:scale-110">
           <img src="/assets/icons/chevron-right.svg" alt="">
         </button>
  
