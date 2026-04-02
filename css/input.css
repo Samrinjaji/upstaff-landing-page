@@ -28,7 +28,7 @@
   pointer-events: none;
 }
 
-.hero-bg {
+.hero-bg, #features {
   background:
     radial-gradient(ellipse 80% 60% at 60% 20%, rgba(201,168,76,0.12) 0%, transparent 60%),
     radial-gradient(ellipse 50% 40% at 10% 80%, rgba(201,168,76,0.06) 0%, transparent 50%),
@@ -94,3 +94,9 @@
 .carousel-slide.active img {
   animation: float 6s ease-in-out infinite;
 }
+
+.gold-line {
+  background: linear-gradient(90deg, transparent, var(--color-sky), transparent);
+  height: 1px;
+}
+
