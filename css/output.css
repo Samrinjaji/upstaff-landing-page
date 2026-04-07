@@ -967,6 +967,8 @@
 .feature-card {
   perspective: 1200px;
   background: transparent !important;
+  border-radius: 0.75rem;
+  overflow: hidden;
   isolation: isolate;
 }
 #carousel-track {
