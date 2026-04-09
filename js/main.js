@@ -87,6 +87,10 @@ function initCarousel() {
 
 loadSection("navbar", "navbar.html", initNavbar);
 loadSection("hero", "hero.html", initCarousel);
+loadSection("features", "features.html");
+loadSection("about", "about.html");
+
+
 /* function loadSection(id, file, callback) {
   fetch(`./sections/${file}`)
     .then(res => res.text())
