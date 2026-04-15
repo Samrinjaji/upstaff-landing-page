@@ -1,4 +1,4 @@
- @import "tailwindcss";
+@import "tailwindcss";
 
  @theme {
   /* fonts */
@@ -6,7 +6,6 @@
     --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
     --font-open: "Open Sans", "Roboto", sans-serif;
   
-  /* Backgrounds */
     --color-void-elevated: #080E2E;
     --color-void-surface: #1c1b1a;
 
@@ -17,7 +16,7 @@
 
 }
 
-.hero-bg, .py-24 {
+.hero-bg {
   background:
     radial-gradient(ellipse 80% 60% at 60% 20%, rgba(201,168,76,0.12) 0%, transparent 60%),
     radial-gradient(ellipse 50% 40% at 10% 80%, rgba(201,168,76,0.06) 0%, transparent 50%),
@@ -31,8 +30,8 @@
 }
 
 .btn-outline:hover {
-  border-color: var(--color-sky);
-  color: var(--color-sky);
+  border-color: var(--color-sky-600);
+  color: var(--color-sky-600);
   background: rgba(201,168,76,0.06);
 }
 
