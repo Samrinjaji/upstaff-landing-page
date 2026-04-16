@@ -107,3 +107,5 @@ loadSection("navbar", "navbar.html", initNavbar);
 loadSection("hero", "hero.html", initCarousel);
 loadSection("features", "features.html");
 loadSection("about", "about.html");
+loadSection("cta", "cta.html");
+loadSection("footer", "footer.html");
