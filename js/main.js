@@ -1,13 +1,46 @@
 function loadSection(id, file, callback) {
   fetch(`./sections/${file}`)
-    .then(res => res.text())
+    .then(res => {
+      if (!res.ok) throw new Error(`Failed to load ${file}`);
+      return res.text();
+    })
     .then(data => {
-      document.getElementById(id).innerHTML = data;
-      if (callback) callback(); // initialize after load
-    });
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      el.innerHTML = data;
+
+      requestAnimationFrame(() => {
+        if (callback) callback();
+      });
+    })
+    .catch(err => console.error(err));
 }
 
-// Initialize carousel
+
+function initNavbar() {
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (!menuBtn || !mobileMenu) return;
+
+  const newBtn = menuBtn.cloneNode(true);
+  menuBtn.replaceWith(newBtn);
+
+  newBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  const links = mobileMenu.querySelectorAll("a");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+}
+
+let carouselInterval = null;
+
 function initCarousel() {
   const track = document.getElementById("carousel-track");
   const slides = document.querySelectorAll(".carousel-slide");
@@ -20,11 +53,10 @@ function initCarousel() {
   let index = 0;
   const total = slides.length;
 
-  totalText.textContent = total;
+  if (totalText) totalText.textContent = total;
 
   function updateCarousel() {
-    const width = slides[0].clientWidth;
-    track.style.transform = `translateX(-${index * width}px)`;
+    track.style.transform = `translateX(-${index * 100}%)`;
 
     dots.forEach((dot, i) => {
       if (i === index) {
@@ -36,30 +68,44 @@ function initCarousel() {
       }
     });
 
-    currentText.textContent = index + 1;
+    if (currentText) currentText.textContent = index + 1;
   }
 
-  window.carouselMove = function(direction) {
-    index += direction;
-    if (index < 0) index = total - 1;
-    if (index >= total) index = 0;
+  function move(direction) {
+    index = (index + direction + total) % total;
     updateCarousel();
   }
 
-  window.carouselGoTo = function(i) {
+  function goTo(i) {
     index = i;
     updateCarousel();
   }
 
-  setInterval(() => carouselMove(1), 3000);
+
+  window.carouselMove = move;
+  window.carouselGoTo = goTo;
+
+
+  if (carouselInterval) {
+    clearInterval(carouselInterval);
+  }
+
+  carouselInterval = setInterval(() => {
+    move(1);
+  }, 2000);
+
+
+  if (!window.__carouselResizeBound) {
+    window.addEventListener("resize", updateCarousel);
+    window.__carouselResizeBound = true;
+  }
+
   updateCarousel();
-  window.addEventListener("resize", updateCarousel);
 }
 
-// Load all sections, init carousel after hero loads
-loadSection("navbar", "navbar.html");
-loadSection("hero", "hero.html", initCarousel); // <-- callback here
+loadSection("navbar", "navbar.html", initNavbar);
+loadSection("hero", "hero.html", initCarousel);
 loadSection("features", "features.html");
-loadSection("testimonials", "testimonials.html");
+loadSection("about", "about.html");
 loadSection("cta", "cta.html");
 loadSection("footer", "footer.html");
